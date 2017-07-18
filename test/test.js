@@ -24,14 +24,18 @@ describe('Load a Page', function () {
       nightmare
         .goto('http://google.com')
         .end()
-        .then(result => {
-          console.log('success')
-          done()
-        })
-        .catch(err => {
-          console.log('failed')
-          done()
-        })
+        .then(result => { done() })
+        .catch(done)
+    })
+  })
+  describe('google loads', () => {
+    it('should load without error', done => {
+      // your actual testing urls will likely be `http://localhost:port/path`
+      nightmare
+        .goto('http://gethoodie.com')
+        .end()
+        .then(result => { done() })
+        .catch(done)
     })
   })
 
