@@ -13,7 +13,14 @@ jobs:
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/mongo:3.4.4
-      - image: aheuermann/electron
+      # - image: aheuermann/electron
+      # - image: eruvanos/xvfb
+      # - image: comiq/xvfb
+      # 'export DISPLAY=:9.0 && Xvfb -ac -screen scrn 1024x768x24 :9.0 &' version
+      # - image: beneaththeink/node-xvfb
+      # - image: markadams/chromium-xvfb
+      # - image: otamachan/xvfb
+      - image: bdadamas24/node-xvfb
 
     working_directory: ~/repo
 
@@ -36,3 +43,13 @@ jobs:
 
       # run tests!
       - run: yarn test
+
+      # - run:
+      #     name: install-xvfb
+      #     command: 'export DISPLAY=:9.0 && Xvfb -ac -screen scrn 1024x768x24 :9.0 &'
+
+      # - run:
+      #     name: start-xvfb
+      #     command: 'Xvfb -ac -screen scrn 1280x2000x24 :9.0 &'
+      # - run: 'export DISPLAY=:9.0 && Xvfb -ac -screen scrn 1024x768x24 :9.0 &'
+      # - run: xvfb-run --server-args="-screen 0 1024x768x24" && yarn test
