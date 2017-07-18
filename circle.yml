@@ -44,10 +44,10 @@ jobs:
       # run tests!
       # - run: yarn test
 
-      - run: Xvfb -ac -screen scrn 1024x768x24 :9.0 &
       - run: echo $DISPLAY
-      - run: export DISPLAY=:9.0
+      - run: export DISPLAY=':99.0'
       - run: echo $DISPLAY
+      - run: Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
       - run: yarn test
 
       # - run: xvfb-run --server-args="-screen 0 1024x768x24" yarn test
