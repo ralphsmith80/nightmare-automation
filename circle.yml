@@ -36,8 +36,8 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      # - run: yarn install
-      - run: npm install
+      - run: yarn install
+      # - run: npm install
 
       - save_cache:
           paths:
@@ -54,7 +54,7 @@ jobs:
       # - run: export DISPLAY=:99.0
       # - run: echo $DISPLAY
       # - run: Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
-      # - run: yarn test
+      - run: yarn test
 
-      - run: xvfb-run --server-args="-screen 0 1024x768x24" npm test
+      # - run: xvfb-run --server-args="-screen 0 1024x768x24" npm test
       # - run: make test
