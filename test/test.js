@@ -18,14 +18,20 @@ describe('Load a Page', function () {
     })
   })
 
-  describe('/ (Home Page)', () => {
+  describe('google loads', () => {
     it('should load without error', done => {
       // your actual testing urls will likely be `http://localhost:port/path`
       return nightmare
-        .goto('https://google.com')
+        .goto('http://google.com')
         .end()
-        .then(result => { done() })
-        .catch(done)
+        .then(result => {
+          console.log('success')
+          done()
+        })
+        .catch(err => {
+          console.log('failed')
+          done()
+        })
     })
   })
 
