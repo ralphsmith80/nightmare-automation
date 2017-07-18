@@ -7,7 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: beneaththeink/node-xvfb
+      - image: bdadamas24/node-xvfb
       # - image: circleci/node:7.10
 
       # Specify service dependencies here if necessary
