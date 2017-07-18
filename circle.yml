@@ -52,7 +52,10 @@ jobs:
       #     name: start-xvfb
       #     command: 'Xvfb -ac -screen scrn 1280x2000x24 :9.0 &'
       # - run: 'export DISPLAY=:9.0 && Xvfb -ac -screen scrn 1024x768x24 :9.0 &'
-      - run: xvfb-run --server-args="-screen 0 1024x768x24"
+      # - run: which xvfb
+      # - run: which Xvfb
+      # - run: which xvfb-run
+      - run: xvfb-run --server-args="-screen 0 1024x768x24" yarn test
 
       # run tests!
-      - run: yarn test
+      # - run: yarn test
