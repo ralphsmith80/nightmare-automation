@@ -22,7 +22,7 @@ describe('Load a Page', function () {
     it('should load without error', done => {
       // your actual testing urls will likely be `http://localhost:port/path`
       nightmare
-        .goto('https://gethoodie.com')
+        .goto('https://google.com')
         .end()
         .then(result => { done() })
         .catch(done)
