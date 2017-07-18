@@ -21,7 +21,7 @@ describe('Load a Page', function () {
   describe('google loads', () => {
     it('should load without error', done => {
       // your actual testing urls will likely be `http://localhost:port/path`
-      return nightmare
+      nightmare
         .goto('http://google.com')
         .end()
         .then(result => {
