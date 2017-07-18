@@ -28,7 +28,7 @@ describe('Load a Page', function () {
         .catch(done)
     })
   })
-  describe('google loads', () => {
+  describe('gethoodie loads', () => {
     it('should load without error', done => {
       // your actual testing urls will likely be `http://localhost:port/path`
       nightmare
