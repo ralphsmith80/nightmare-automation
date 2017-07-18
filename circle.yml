@@ -43,6 +43,7 @@ jobs:
 
       # run tests!
       # - run: yarn test
+      - run: HEADLESS=0 yarn test
 
       # - run: echo $DISPLAY
       # - run: export DISPLAY=:99.0
@@ -51,4 +52,4 @@ jobs:
       # - run: yarn test
 
       # - run: xvfb-run --server-args="-screen 0 1024x768x24" yarn test
-      - run: make test
+      # - run: make test
